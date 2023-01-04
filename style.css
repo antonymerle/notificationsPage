@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;700;&display=swap");
+
+:root {
+  --mainColor: #f9fafe;
+  --notificationBadge: #0a3278;
+  --mainText: #bec4cc;
+  --unread-badge: #fd5d5b;
+  --primaryText: var(--mainColor);
+  --secondaryText: var(--mainColor);
+  --strongText: #8c929d;
+  --strongTextPeople: #1d2029;
+  --linkText: #25396f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--mainColor);
+  font-family: "Roboto", sans-serif;
+}
+
+.main-container {
+  width: 800px;
+  background-color: #fff;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+}
+
+.nav-header h1 {
+  margin: 10px 15px 10px 20px;
+}
+
+.nav-header h2 {
+  font-size: 18px;
+  color: white;
+  background-color: var(--notificationBadge);
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+nav h4 {
+  color: var(--mainText);
+  margin: 10px 20px 10px 20px;
+  font-weight: 400;
+}
+
+.notifications-container {
+  margin: 20px;
+}
+
+.notification-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic img {
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.notification-content {
+  display: block;
+}
+
+.timestamp {
+}
+
+.unread {
+  width: 5px;
+  height: 5px;
+  background-color: var(--unread-badge);
+}
+
+/* @media screen and (max-width: 1200px) {
+  .main-container {
+    width: 95%;
+  }
+} */
