@@ -3,13 +3,11 @@
 :root {
   --mainColor: #f9fafe;
   --notificationBadge: #0a3278;
-  --mainText: #bec4cc;
+  --mainText: #7e858d;
   --unread-badge: #fd5d5b;
-  --primaryText: var(--mainColor);
-  --secondaryText: var(--mainColor);
-  --strongText: #8c929d;
+  --strongText: #646873;
   --strongTextPeople: #1d2029;
-  --linkText: #25396f;
+  --linkText: #50659b;
 }
 
 * {
@@ -23,15 +21,30 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+b {
+  color: var(--strongText);
+}
+
+a {
+  color: var(--linkText);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#people {
+  color: var(--strongTextPeople);
+}
+
 .main-container {
   width: 800px;
   background-color: #fff;
-  margin: 0 auto;
-  border: 1px solid black;
+  margin: 50px auto;
+  padding-top: 30px;
   border-radius: 5px;
 }
 
 nav {
+  margin: 0 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,7 +56,7 @@ nav {
 }
 
 .nav-header h1 {
-  margin: 10px 15px 10px 20px;
+  margin-right: 15px;
 }
 
 .nav-header h2 {
@@ -61,13 +74,29 @@ nav h4 {
 }
 
 .notifications-container {
-  margin: 20px;
+  margin: 20px 30px;
 }
 
 .notification-card {
-  display: flex;
-  align-items: center;
+  display: grid;
+  justify-content: left;
+  align-items: flex-start;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-areas:
+    "pp message notification"
+    "pp date date"
+    "pp private-message private-message";
+  padding: 20px;
   margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+#unread {
+  background-color: var(--mainColor);
+}
+
+.profile-pic {
+  grid-area: pp;
 }
 
 .profile-pic img {
@@ -76,20 +105,35 @@ nav h4 {
 }
 
 .notification-content {
-  display: block;
+  grid-area: message;
+  color: var(--mainText);
 }
 
 .timestamp {
+  grid-area: date;
+  margin-top: 5px;
+  color: var(--mainText);
 }
 
-.unread {
+.private-message {
+  margin-top: 20px;
+
+  grid-area: private-message;
+  color: var(--mainText);
+  border: 1px solid var(--strongText);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.unread-dot {
   width: 5px;
   height: 5px;
+  border-radius: 50%;
   background-color: var(--unread-badge);
 }
 
-/* @media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
   .main-container {
-    width: 95%;
+    width: 80%;
   }
-} */
+}
