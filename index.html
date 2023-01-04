@@ -17,51 +17,51 @@
         <h4>Marquer tout comme lu</h4>
       </nav>
       <div class="notifications-container">
-        <section class="notification-card">
+        <section class="notification-card" id="unread">
           <div class="profile-pic">
             <img src="images/image-daniel.jpg" alt="daniel-pp" />
           </div>
           <div class="notification-content">
             <p>
-              Daniel a réagi à votre commentaire
+              <b id="people">Daniel</b> a réagi à votre commentaire
               <b>"Aujourd'hui c'est mon premier jour !"</b>
             </p>
-            <div class="unread"></div>
-            <p class="timestamp">Il y a 1m</p>
           </div>
+          <div class="unread-dot"></div>
+          <p class="timestamp">Il y a 1m</p>
         </section>
-        <section class="notification-card">
+        <section class="notification-card" id="unread">
           <div class="profile-pic">
             <img src="images/image-claire.jpg" alt="claire-pp" />
           </div>
           <div class="notification-content">
-            <p>Claire a commencé à vous suivre</p>
-            <div class="unread"></div>
-            <p class="timestamp">Il y a 3h</p>
+            <p><b id="people">Claire</b> a commencé à vous suivre</p>
           </div>
+          <div class="unread-dot"></div>
+          <p class="timestamp">Il y a 3h</p>
         </section>
-        <section class="notification-card">
+        <section class="notification-card" id="unread">
           <div class="profile-pic">
             <img src="images/image-eva.jpg" alt="eva-pp" />
           </div>
           <div class="notification-content">
-            <p>Eva a rejoint votre groupe <a href="#">JS study group</a></p>
-            <div class="unread"></div>
-            <p class="timestamp">Il y a 1j</p>
+            <p>
+              <b id="people">Eva</b> a rejoint votre groupe
+              <a href="#">JS study group</a>
+            </p>
           </div>
+          <div class="unread-dot"></div>
+          <p class="timestamp">Il y a 1j</p>
         </section>
-        <section>
-          <div class="notification-card">
-            <div class="profile-pic">
-              <img src="images/image-jonathan.jpg" alt="jonathan-pp" />
-            </div>
-            <div class="notification-content">
-              <p>Jonathan vous a envoyé un message privé</p>
-
-              <div class="unread"></div>
-              <p class="timestamp">Il y a 5j</p>
-            </div>
+        <section class="notification-card">
+          <div class="profile-pic">
+            <img src="images/image-jonathan.jpg" alt="jonathan-pp" />
           </div>
+          <div class="notification-content">
+            <p><b id="people">Jonathan</b> vous a envoyé un message privé</p>
+          </div>
+          <p class="timestamp">Il y a 5j</p>
+
           <div class="private-message">
             Bonjour, merci d'avoir créé ce groupe d'étude. J'ai commencé à
             apprendre JavaScript mais j'aimerais pouvoir réviser avec d'autres
@@ -72,11 +72,11 @@
           <div class="profile-pic">
             <img src="images/image-kevin.jpg" alt="kevin-pp" />
           </div>
+
           <div class="notification-content">
-            <p>Kevin a commenté votre image</p>
-            <div class="unread"></div>
-            <p class="timestamp">Il y a 1 semaine</p>
+            <p><b id="people">Kevin</b> a commenté votre image</p>
           </div>
+          <p class="timestamp">Il y a 1 semaine</p>
         </section>
       </div>
     </main>
